@@ -9,6 +9,7 @@ export default class extends Controller {
   responseKindValue: string
   sortable: Sortable
   handleValue: string
+  forceFallback: boolean
   // @ts-ignore
   element: HTMLElement
 
@@ -57,6 +58,7 @@ export default class extends Controller {
     return {
       animation: this.animationValue || this.defaultOptions.animation || 150,
       handle: this.handleValue || this.defaultOptions.handle || undefined,
+      forceFallback: this.forceFallback || this.defaultOptions.forceFallback || false,
       onEnd: this.end
     }
   }
